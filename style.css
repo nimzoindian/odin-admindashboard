@@ -1,0 +1,29 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+
+.container {
+    display: grid;
+    gap: 0;
+    grid-template-rows: repeat(8, 1fr);
+    grid-template-columns: repeat(5,2fr);
+    width: 100vw;
+    height: 100vh;
+}
+
+nav {
+    background-color: rgb(233, 165, 40);
+    grid-area: 1 / 1 / 9 / 2;
+}
+
+header {
+    background-color: rgb(224, 224, 224);
+    grid-area: 1 / 2 / 3 / 6;
+}
+
+main {
+    background-color: rgb(255, 255, 255);
+    grid-area: 3 / 2 / 9 / 6;
+}
