@@ -30,9 +30,6 @@ main {
     grid-area: 3 / 2 / 9 / 6;
 }
 
-ul {
-}
-
 ul li {
     font-size: max(2vw, 1.16rem);
     margin: 10px 0px 10px 5.5vw;
@@ -80,4 +77,56 @@ ul > h3 {
 
 .privacy {
     list-style-image: url('./SVG/lock.svg');
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+}
+
+.htop {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hbot {
+    display: flex;
+}
+
+.searchbar {
+    margin: 20px;
+}
+
+.searchbar input {
+    width: 33vw;
+    height: 30px;
+    margin-top: 12px;
+    padding-left: 10px;
+    border-radius: 14px;
+    border: none;
+    font-size: 24px;
+    
+}
+
+.searchbar img {
+    margin-right: 10px;
+}
+
+.user-profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#profile-icon {
+    width: 32px;
+    border-radius: 16px;
+    border: 1px rgba(199, 199, 199, 0.171);
+    margin-top: 20px;
+    margin-right: 12px;
+}
+
+.user-profile .username {
+    font-size: 16px;
+    margin-top: 30px;
 }
