@@ -8,14 +8,16 @@
     display: grid;
     gap: 0;
     grid-template-rows: repeat(8, 1fr);
-    grid-template-columns: repeat(5,2fr);
+    grid-template-columns: repeat(5, 2fr);
     width: 100vw;
     height: 100vh;
 }
 
 nav {
-    background-color: rgb(233, 165, 40);
+    background-color: rgb(228, 191, 123);
     grid-area: 1 / 1 / 9 / 2;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
 }
 
 header {
@@ -26,4 +28,56 @@ header {
 main {
     background-color: rgb(255, 255, 255);
     grid-area: 3 / 2 / 9 / 6;
+}
+
+ul {
+}
+
+ul li {
+    font-size: max(2vw, 1.16rem);
+    margin: 10px 0px 10px 5.5vw;
+}
+
+ul > h3 {
+    margin: 30px 0px 25px 0px;
+    padding: 5px 0px 5px 3.3vw;
+    font-size: max(2.2vw, 1.33rem);
+    background-color: rgba(0, 0, 0, 0.199);
+}
+
+.home {
+    list-style-image: url('./SVG/home3.svg');
+}
+
+.profile {
+    list-style-image: url('./SVG/profile.svg');
+}
+
+.messages {
+    list-style-image: url('./SVG/pencil.svg');
+}
+
+.history {
+    list-style-image: url('./SVG/alarm.svg');
+}
+
+.tasks {
+    list-style-image: url('./SVG/file-empty.svg');
+}
+
+.communities {
+    list-style-image: url('./SVG/office.svg');
+}
+
+.settings {
+    list-style-image: url('./SVG/cog.svg');
+    margin-top: 40px;
+}
+
+.support {
+    list-style-image: url('./SVG/bug.svg');
+}
+
+.privacy {
+    list-style-image: url('./SVG/lock.svg');
 }

@@ -6,17 +6,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
-        <nav>
-            <h3>Dashboard</h3>
-            <div class="list">
-                <h5>Home</h5>
-            </div>
+        <nav> 
+            <ul>
+                <h3 class="dashboard">Dashboard</h3>
+                <li class="home"><h4>Home</h4></li>
+                <li class="profile"><h4>Profile</h4></li>
+                <li class="messages"><h4>Messages</h4></li>
+                <li class="history"><h4>History</h4></li>
+                <li class="tasks"><h4>Tasks</h4></li>
+                <li class="communities"><h4>Communities</h4></li>
+                <li class="settings"><h4>Settings</h4></li>
+                <li class="support"><h4>Support</h4></li>
+                <li class="privacy"><h4>Privacy</h4></li>
+            </ul>
         </nav>
         <header>
-            <input type="text" name="search" id="search"/>
+            <div class="searchbar">
+                <img src="./SVG/search.svg"/>
+                <input type="text" name="search" id="search"/>
+            </div>
+            <div class="user-profile">
+                <img src="./SVG/alarm.svg"/>
+                <img src=""/>
+                <h4 class="username">Chess Prodigy</h4>
+            </div>
+            <div class="welcome-user">
+                <img src=""/>
+                <h6>Hi there,</h6>
+                <h4 class="username">Chess Prodigy</h4>
+                <span>(@thegoat)</span>
+            </div>
+            <div class="head-buttons">
+                <button>New</button>
+                <button>Upload</button>
+                <button>Share</button>
+            </div>
         </header>
         <main>
             <div class="cards">
