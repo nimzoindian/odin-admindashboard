@@ -16,21 +16,26 @@ nav {
     background-color: rgb(228, 191, 123);
     grid-area: 1 / 1 / 9 / 2;
     font-weight: 500;
-    height: 100vh;
+    min-height: 100vh;
     width: clamp(180px, 20vw, auto);
 }
 
 header {
-    background-color: rgb(224, 224, 224);
+    background-color: rgb(240, 240, 240);
     grid-area: 1 / 2 / 3 / 6;
     display: flex;
     flex-direction: column;
-    height: clamp(156px, 24vh, 175px);
+    justify-content: space-between;
+    height: auto;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.363);
 }
 
 main {
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(211, 211, 211);
     grid-area: 3 / 2 / 9 / 6;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(2,1fr);
 }
 
 ul li {
@@ -90,6 +95,8 @@ ul > h3 {
 .hbot {
     display: flex;
     justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 12px;
 }
 
 .searchbar {
@@ -105,7 +112,6 @@ ul > h3 {
     border-radius: 14px;
     border: none;
     font-size: 24px;
-    
 }
 
 .searchbar img {
@@ -159,7 +165,6 @@ ul > h3 {
 
 .head-buttons {
     margin-right: 36px;
-    margin-top: 30px;
 }
 
 .head-buttons button {
@@ -170,4 +175,19 @@ ul > h3 {
     border: none;
     border-radius: 16px;
     background-color: rgb(228, 191, 123);
+}
+
+main .cards {
+    grid-area: 1 / 1 / 3 / 4;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(3,1fr);
+    gap: 10px;
+    margin: 30px 15px 30px 15px;
+}
+
+.cards > div {
+    background-color: white;
+    max-width: clamp(200px, 30vw, 360px);
+    border-radius: 24px;
 }
