@@ -7,14 +7,14 @@
 .container {
     display: grid;
     gap: 0;
-    grid-template-rows: repeat(8, 1fr);
-    grid-template-columns: repeat(5, 2fr);
+    grid-template-rows: 0.67fr 5fr;
+    grid-template-columns: 1fr 6fr;
     font-family: 'Ubuntu', sans-serif;
 }
 
 nav {
     background-color: rgb(228, 191, 123);
-    grid-area: 1 / 1 / 9 / 2;
+    grid-area: 1 / 1 / 3 / 2;
     font-weight: 500;
     min-height: 100vh;
     width: clamp(180px, 20vw, auto);
@@ -22,20 +22,21 @@ nav {
 
 header {
     background-color: rgb(240, 240, 240);
-    grid-area: 1 / 2 / 3 / 6;
+    grid-area: 1 / 2 / 1 / 3;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: auto;
     box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.363);
+    z-index: 1;
 }
 
 main {
     background-color: rgb(211, 211, 211);
-    grid-area: 3 / 2 / 9 / 6;
+    grid-area: 2 / 2 / 3 / 3;
     display: grid;
-    grid-template-columns: repeat(4,1fr);
-    grid-template-rows: repeat(2,1fr);
+    grid-template-columns: 3fr 1fr;
+    padding: 2rem 1rem;
+    gap: 1rem;
 }
 
 ul li {
@@ -178,16 +179,65 @@ ul > h3 {
 }
 
 main .cards {
-    grid-area: 1 / 1 / 3 / 4;
+    grid-area: 1 / 1 / 1 / 2;
     display: grid;
-    grid-template-columns: repeat(2,1fr);
-    grid-template-rows: repeat(3,1fr);
-    gap: 10px;
-    margin: 30px 15px 30px 15px;
+    grid-template-rows: auto 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-auto-rows: 1fr;
+    gap: 2rem 1rem;
 }
 
 .cards > div {
     background-color: white;
-    max-width: clamp(200px, 30vw, 360px);
-    border-radius: 24px;
+    border-radius: 15px;
+    border-left: 15px solid rgb(255, 166, 0);
+    display: grid;
+    grid-template-rows: 1fr 3fr 1fr;
+    padding: 0.5rem;
+    box-shadow: 0.1rem 0.1rem 0.05rem rgba(0, 0, 0, 0.356);
+}
+
+.cards > h4 {
+    margin: 0;
+    grid-column: 1 / -1;
+    margin-bottom: -1.5rem;
+}
+
+.card-buttons {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.card-buttons > * {
+    padding: 0.25rem;
+}
+
+.info {
+    grid-area: 1 / 2 / 1 / 2;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 1rem;
+}
+
+.announcements {
+    display: flex;
+    flex-direction: column;
+}
+
+.info h4 {
+    font-size: 1.4rem;
+    margin: 0;
+    margin-bottom: 0.5rem;
+}
+
+.announcement-info, .trending-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem 2rem;
+    justify-content: space-around;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0.1rem 0.1rem 0.05rem rgba(0, 0, 0, 0.356);
 }
